@@ -1,16 +1,10 @@
-import { Text, View } from 'react-native';
-import { Input } from './src/components/input/input';
+import { View } from 'react-native';
+import { LoginForm } from '@/screens/security/LoginForm';
 
 export default function App() {
-  const doHello = () => {
-    console.log('hello');
-  };
-
-
   return (
-    <View className="flex-1 items-center justify-center bg-white">
-      <Text>Open up App.js to start working on your app!</Text>
-      <Input placeholder='dbadwadaw' />
+    <View className="flex-1 justify-center bg-white mx-8">
+      <LoginForm />
     </View>
   );
 };

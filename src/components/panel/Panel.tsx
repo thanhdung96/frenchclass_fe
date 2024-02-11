@@ -1,11 +1,7 @@
 import { ReactElement } from "react";
-import { StyledPanel } from "./Panel.style";
+import { StyledPanel } from "./panel.style";
 import React from "react";
 
-interface PanelProps {
-  children?: ReactElement;
-}
-
-export const Panel = ({ children }: PanelProps): ReactElement => {
+export const Panel = ({ children }): ReactElement => {
   return <StyledPanel>{children}</StyledPanel>;
 };

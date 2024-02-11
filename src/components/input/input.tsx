@@ -1,8 +1,8 @@
 import { ReactElement } from "react";
 import { StyledInput } from "./input.style";
 import { InputModeOptions } from "react-native";
-import { Text } from "../text/Text";
-import { BaseProps } from "../base";
+import { Text } from "@/components/text/text";
+import { BaseProps } from "@/components/base";
 import React from "react";
 
 export interface InputProps extends BaseProps {
@@ -15,6 +15,7 @@ export interface InputProps extends BaseProps {
   maxLength?: number;
   helpText?: string;
   hasError?: boolean;
+  secureTextEntry?: boolean;
 }
 
 export const Input = ({
@@ -28,6 +29,7 @@ export const Input = ({
   maxLength = 64,
   helpText,
   hasError = false,
+  secureTextEntry = false,
 }: InputProps): ReactElement => {
   return (
     <>
@@ -41,6 +43,7 @@ export const Input = ({
         onChangeText={onChangeText}
         value={value}
         maxLength={maxLength}
+        secureTextEntry={secureTextEntry}
       />
       {helpText ? <Text textContent={helpText} hasError={hasError} /> : <></>}
     </>
