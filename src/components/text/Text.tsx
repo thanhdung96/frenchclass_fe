@@ -1,6 +1,6 @@
 import { ReactElement } from "react";
-import { StyledText } from "./Text.style";
-import { BaseProps } from "../base";
+import { StyledText } from "./text.style";
+import { BaseProps } from "@/components/base";
 import React from "react";
 
 export interface TextProps extends BaseProps {
