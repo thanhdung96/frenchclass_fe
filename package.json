@@ -12,6 +12,8 @@
     "tailwind": "tailwindcss -i ./tailwind.css -o ./dist/css/tailwind.css"
   },
   "dependencies": {
+    "@react-navigation/native": "^6.1.12",
+    "@react-navigation/native-stack": "^6.9.20",
     "@types/react": "~18.2.45",
     "axios": "^1.6.7",
     "expo": "~50.0.5",
@@ -24,7 +26,9 @@
     "react-native": "0.73.2",
     "react-native-formik": "^1.7.8",
     "tailwindcss": "3.3.2",
-    "typescript": "^5.3.0"
+    "typescript": "^5.3.0",
+    "react-native-screens": "~3.29.0",
+    "react-native-safe-area-context": "4.8.2"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
