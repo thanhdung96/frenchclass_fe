@@ -2,15 +2,21 @@ import React, { ReactElement, useState } from "react";
 import { Input } from "@/components/input/Input";
 import { Button } from "@/components/button/Button";
 import { Formik } from "formik";
-import { LoginDto } from "@/utils/dto/security.dto";
+import { LoginAccessTokenDto, LoginDto } from "@/utils/dto/security.dto";
 import { doLogin } from "@/services/security/security.service";
 
-export const LoginForm = (): ReactElement => {
+interface LoginFormParams {
+  onLoginSuccess: (tokenDto: LoginAccessTokenDto) => void;
+}
+
+export const LoginForm = ({
+  onLoginSuccess,
+}: LoginFormParams): ReactElement => {
   const [loginData, setLoginData] = useState<LoginDto>();
 
   const onLogin = async (data: LoginDto): Promise<void> => {
-    const response = await doLogin(data);
-    console.log(response);
+    const response: LoginAccessTokenDto = await doLogin(data);
+    onLoginSuccess(response);
   };
 
   return (

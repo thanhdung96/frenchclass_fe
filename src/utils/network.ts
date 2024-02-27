@@ -1,5 +1,6 @@
 import axios, { AxiosResponse } from "axios";
 import { getItemAsync } from "expo-secure-store";
+import { ACCESS_TOKEN_KEY } from "@/utils/constants";
 
 export type HttpMethod = "get" | "post" | "put" | "patch";
 
@@ -9,7 +10,7 @@ export async function request<T, K>(
   postData?: T,
   queryParams?: any,
 ): Promise<K> {
-  const accessToken: string = await getItemAsync("accessToken");
+  const accessToken: string = await getItemAsync(ACCESS_TOKEN_KEY);
 
   return axios
     .request({
