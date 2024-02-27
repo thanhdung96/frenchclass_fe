@@ -1,7 +1,7 @@
 import { ReactElement } from "react";
-import { StyledInput } from "./input.style";
+import { StyledInput } from "./Input.style";
 import { InputModeOptions } from "react-native";
-import { Text } from "@/components/text/text";
+import { Text } from "@/components/text/Text";
 import { BaseProps } from "@/components/base";
 import React from "react";
 

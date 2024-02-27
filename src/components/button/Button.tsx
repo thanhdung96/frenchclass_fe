@@ -1,6 +1,6 @@
 import React from "react";
 import { ReactElement } from "react";
-import { StyledButton } from "./button.style";
+import { StyledButton } from "./Button.style";
 import { BaseProps } from "@/components/base";
 
 export interface ButtonProps extends BaseProps {

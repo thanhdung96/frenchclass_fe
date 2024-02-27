@@ -1,6 +1,6 @@
 import React, { ReactElement, useState } from "react";
-import { Input } from "@/components/input/input";
-import { Button } from "@/components/button/button";
+import { Input } from "@/components/input/Input";
+import { Button } from "@/components/button/Button";
 import { Formik } from "formik";
 import { LoginDto } from "@/utils/dto/security.dto";
 import { doLogin } from "@/services/security/security.service";

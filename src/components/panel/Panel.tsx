@@ -1,5 +1,5 @@
 import { ReactElement } from "react";
-import { StyledPanel } from "./panel.style";
+import { StyledPanel } from "./Panel.style";
 import React from "react";
 
 export const Panel = ({ children }): ReactElement => {
