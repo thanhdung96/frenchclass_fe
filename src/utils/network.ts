@@ -1,4 +1,5 @@
 import axios, { AxiosResponse } from "axios";
+import { getItemAsync } from "expo-secure-store";
 
 export type HttpMethod = "get" | "post" | "put" | "patch";
 
@@ -8,12 +9,17 @@ export async function request<T, K>(
   postData?: T,
   queryParams?: any,
 ): Promise<K> {
+  const accessToken: string = await getItemAsync("accessToken");
+
   return axios
     .request({
       method,
       url,
       params: { ...queryParams },
       data: { ...postData },
+      headers: {
+        Authorization: accessToken || "",
+      },
     })
     .then((response: AxiosResponse) => {
       return response.data;
