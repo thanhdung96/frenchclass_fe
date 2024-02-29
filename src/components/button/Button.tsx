@@ -1,5 +1,4 @@
-import React from "react";
-import { ReactElement } from "react";
+import React, { ReactElement } from "react";
 import { StyledButton } from "./Button.style";
 import { BaseProps } from "@/components/base";
 
@@ -9,12 +8,12 @@ export interface ButtonProps extends BaseProps {
   disabled?: boolean;
 }
 
-export const Button = ({
+export function Button({
   title,
   onPress,
   disabled,
   className,
-}: ButtonProps): ReactElement => {
+}: ButtonProps): ReactElement {
   return (
     <StyledButton
       className={className}
@@ -23,4 +22,4 @@ export const Button = ({
       disabled={disabled}
     />
   );
-};
+}

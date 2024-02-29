@@ -4,7 +4,7 @@ import { LoginAccessTokenDto } from "@/utils/dto/security.dto";
 import { setItemAsync } from "expo-secure-store";
 import { ACCESS_TOKEN_KEY } from "@/utils/constants";
 
-export const LoginScreen = ({ navigation }): ReactElement => {
+export function LoginScreen({ navigation }): ReactElement {
   const onLoginSuccess = async (
     tokenDto: LoginAccessTokenDto,
   ): Promise<void> => {
@@ -13,4 +13,4 @@ export const LoginScreen = ({ navigation }): ReactElement => {
   };
 
   return <LoginForm onLoginSuccess={onLoginSuccess} />;
-};
+}

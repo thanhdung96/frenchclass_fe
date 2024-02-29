@@ -14,8 +14,8 @@ export async function request<T, K>(
 
   return axios
     .request({
-      method,
-      url,
+      method: method,
+      url: url,
       params: { ...queryParams },
       data: { ...postData },
       headers: {

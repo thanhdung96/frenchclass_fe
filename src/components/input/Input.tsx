@@ -1,9 +1,8 @@
-import { ReactElement } from "react";
+import React, { ReactElement } from "react";
 import { StyledInput } from "./Input.style";
 import { InputModeOptions } from "react-native";
 import { Text } from "@/components/text/Text";
 import { BaseProps } from "@/components/base";
-import React from "react";
 
 export interface InputProps extends BaseProps {
   label?: string;
@@ -18,7 +17,7 @@ export interface InputProps extends BaseProps {
   secureTextEntry?: boolean;
 }
 
-export const Input = ({
+export function Input({
   label,
   className,
   inputMode = "text",
@@ -30,7 +29,7 @@ export const Input = ({
   helpText,
   hasError = false,
   secureTextEntry = false,
-}: InputProps): ReactElement => {
+}: InputProps): ReactElement {
   return (
     <>
       {label ? <Text textContent={label} /> : <></>}
@@ -48,4 +47,4 @@ export const Input = ({
       {helpText ? <Text textContent={helpText} hasError={hasError} /> : <></>}
     </>
   );
-};
+}
